@@ -60,7 +60,7 @@ const CONFIG = {
   whatsapp: "5500000000000",
 
   // ----- WEBHOOK (gera o PIX com segurança, sem expor credenciais no navegador) -----
-  webhookUrl: "https://correntegod.vercel.app",
+  webhookUrl: "https://correntepelobruno.vercel.app",
 
   // ----- TEXTO PARA COMPARTILHAR -----
   textoCompartilhar: "Bruno nasceu sem braços e pernas e vende balas na rua para ajudar o pai, que o cria sozinho. Vamos ajudar ele a conquistar uma cadeira de rodas motorizada — qualquer valor faz diferença.",
