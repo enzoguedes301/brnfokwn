@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#1c1917">
+  <title>Ajude Bruno a conquistar sua independência — Corrente do Bem</title>
+  <meta name="description" content="Bruno nasceu sem os dois braços e sem as duas pernas. Seu pai o cria sozinho há anos. Ajude a comprar uma cadeira de rodas motorizada com controle de queixo. Meta de R$ 100.000 em 30 dias.">
+
+  <!-- Miniatura ao compartilhar no WhatsApp (ajuste a URL depois de publicar) -->
+  <meta property="og:title" content="Ajude Bruno a conquistar sua independência">
+  <meta property="og:description" content="Ele vende balas na rua para aliviar o peso dos ombros do pai que o cria sozinho. Com uma cadeira motorizada, ele pode trabalhar sem depender de ninguém para se locomover.">
+  <meta property="og:image" content="imagens/bruno-vendendo-balas.jpeg">
+  <meta property="og:type" content="website">
+
+  <link rel="stylesheet" href="css/estilo.css?v=2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- TikTok Pixel Code Start -->
+  <script>
+  !function (w, d, t) {
+    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+  var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+  ;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+
+
+    ttq.load('DBQ8HLJC77UBQ4PDUHUG');
+    ttq.page();
+  }(window, document, 'ttq');
+  </script>
+  <!-- TikTok Pixel Code End -->
+</head>
+<body>
+
+<!-- ==========================================================
+     CABEÇALHO COM LOGO
+     ========================================================== -->
+<header class="cabecalho">
+  <div class="cabecalho-conteudo">
+    <!-- Logo -->
+    <img src="imagens/logo.png" alt="Logo da Corrente do Bem" class="logo"
+         onerror="this.closest('.cabecalho').classList.add('sem-logo')">
+    <!-- Texto ao lado da logo -->
+    <p class="cabecalho-texto">Ser Cristão de Verdade é ajudar quem precisa</p>
+  </div>
+</header>
+
+<!-- ==========================================================
+     1. ABERTURA — foto de Bruno como fundo
+     ========================================================== -->
+<section class="abertura">
+  <div class="abertura-foto">
+    <!-- Foto de Bruno vendendo balas na rua, em destaque, sem escurecimento -->
+    <img src="imagens/bruno-vendendo-balas.jpeg" alt="Bruno na cadeira de rodas, vendendo balas na rua"
+         onerror="this.closest('.abertura-foto').classList.add('sem-imagem')">
+  </div>
+
+  <div class="abertura-conteudo">
+    <p class="selo">Campanha solidária · 30 dias</p>
+
+    <h1>Vamos dar independência para <span class="destaque">Bruno</span></h1>
+
+    <p class="abertura-frase">
+      Bruno nasceu sem os dois braços e sem as duas pernas. Ele vende balas na rua para não ver o pai, que o cria sozinho, se esgotar de trabalho. Com uma cadeira de rodas motorizada, ele pode trabalhar sozinho, com dignidade.
+    </p>
+
+    <div class="abertura-seta" aria-hidden="true">
+      <span>conheça a história</span>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+        <path d="M12 5v14M5 12l7 7 7-7"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ==========================================================
+     2. PAINEL — barra de doações + cronômetro
+     ========================================================== -->
+<section class="painel">
+  <div class="painel-card">
+
+    <div class="progresso-topo">
+      <div>
+        <span class="valor-grande" id="valor-arrecadado">R$ 0</span>
+        <span class="valor-meta">de <strong id="valor-meta">R$ 100.000</strong></span>
+      </div>
+      <div class="progresso-pct" id="progresso-pct">0%</div>
+    </div>
+
+    <div class="barra" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Progresso da arrecadação">
+      <div class="barra-preenchida" id="barra-preenchida">
+        <span class="barra-brilho"></span>
+      </div>
+      <span class="marco" style="left:25%"></span>
+      <span class="marco" style="left:50%"></span>
+      <span class="marco" style="left:75%"></span>
+    </div>
+
+    <div class="progresso-rodape">
+      <span><strong id="num-doadores">0</strong> já doaram</span>
+      <span>Faltam <strong id="valor-faltante">R$ 100.000</strong></span>
+    </div>
+
+    <div class="cronometro-bloco">
+      <p class="cronometro-titulo">Tempo restante</p>
+      <div class="cronometro" id="cronometro">
+        <div class="relogio-item"><span class="relogio-num" id="cd-dias">30</span><span class="relogio-rotulo">dias</span></div>
+        <div class="relogio-item"><span class="relogio-num" id="cd-horas">00</span><span class="relogio-rotulo">horas</span></div>
+        <div class="relogio-item"><span class="relogio-num" id="cd-min">00</span><span class="relogio-rotulo">min</span></div>
+        <div class="relogio-item"><span class="relogio-num" id="cd-seg">00</span><span class="relogio-rotulo">seg</span></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ==========================================================
+     3. A HISTÓRIA
+     ========================================================== -->
+<section class="secao" id="historia">
+  <h2>Conheça a história de Bruno</h2>
+
+  <div class="texto">
+    <p>
+      Bruno nasceu sem os dois braços e sem as duas pernas. O pai conta que, no dia em que ele nasceu, o médico o chamou numa salinha e sugeriu que ele o deixasse para adoção. O pai olhou para o médico, pegou o filho no colo e falou: <em>"Esse filho é meu. Enquanto eu tiver forças, eu vou cuidar dele."</em>
+    </p>
+    <p>
+      Hoje são só os dois. O pai de Bruno tem 60 anos e trabalhou de pedreiro a vida inteira. Cria o filho sozinho desde que ele nasceu. Bruno não consegue empurrar a própria cadeira, não consegue abrir uma porta, não consegue nem entrar na própria casa sem a ajuda do pai.
+    </p>
+    <p>
+      Todo dia, o pai tira Bruno da cama, o põe na cadeira e o leva até o centro da cidade para que ele possa vender balas. Ele nunca pediu nada ao filho — mas Bruno não aguenta ver o pai se esgotar daquele jeito, trabalhando na obra o dia inteiro e ainda carregando a cadeira de um lado para o outro. Vender balas foi a forma que Bruno encontrou de ajudar.
+    </p>
+    <p>
+      Ele fica na rua das 6h às 6h da tarde, oferecendo doces a quem passa, esperando o pai sair do trabalho para buscá-lo. Numa semana de vendas fracas, Bruno voltou para casa só com trocados e pediu desculpas ao pai, no jantar, por dar tanto trabalho. O pai largou a colher, ficou em silêncio por um instante e disse: <em>"Meu filho, você não é um filho. Você é meu motivo de acordar todo dia. Enquanto eu conseguir ficar de pé, a gente vai lutar."</em> Levantou-se, tirou o próprio prato de comida e deu a ele.
+    </p>
+    <p>
+      Foi aí que Bruno começou a fazer as contas: com uma cadeira de rodas motorizada, com controles de queixo, ele poderia ir sozinho até a avenida vender seus doces. Não dependeria mais do pai para se locomover, e o pai não precisaria mais se acabar de trabalho carregando-o para todo lado. Bruno estaria, enfim, trabalhando com as próprias forças. Só que essa cadeira custa mais do que os dois conseguem juntar em um ano inteiro.
+    </p>
+    <p>
+      <strong>Qualquer valor ajuda — e compartilhar esta página ajuda tanto quanto doar.</strong>
+    </p>
+  </div>
+
+  <!-- Aviso de preservação de identidade — honestidade com quem doa -->
+  <aside class="aviso-nome">
+    <strong>Sobre os nomes:</strong> por segurança da família, preservamos os nomes
+    verdadeiros e usamos "Bruno" e "seu pai" nesta página. A campanha é organizada por
+    <strong>Marina Silva Santos</strong>, que responde pela chave PIX e
+    publica a prestação de contas na seção de transparência.
+  </aside>
+
+  <!-- Destino das doações -->
+  <div class="destino">
+    <h3>Para onde vai cada real</h3>
+    <ul class="lista-destino">
+      <li><span>Cadeira de rodas motorizada com controle de queixo</span><span class="destino-valor">R$ 75.000</span></li>
+      <li><span>Adaptações de acesso em casa</span><span class="destino-valor">R$ 12.000</span></li>
+      <li><span>Manutenção e baterias da cadeira (12 meses)</span><span class="destino-valor">R$ 8.000</span></li>
+      <li><span>Contas atrasadas da casa</span><span class="destino-valor">R$ 5.000</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ==========================================================
+     4. GALERIA
+     ========================================================== -->
+<section class="secao secao-clara" id="galeria">
+  <h2>Bruno e seu pai</h2>
+  <p class="secao-sub">Deslize para o lado para ver todas</p>
+
+  <div class="carrossel" id="carrossel">
+    <figure class="foto" data-legenda="Bruno e seu pai, que o cria sozinho desde que nasceu">
+      <img src="imagens/bruno-e-pai.jpeg" alt="Bruno ao lado do pai, em casa" loading="lazy">
+      <figcaption>Bruno e seu pai, que o cria sozinho desde que nasceu</figcaption>
+    </figure>
+    <figure class="foto" data-legenda="Bruno na avenida, vendendo balas para ajudar nas contas">
+      <img src="imagens/bruno-vendendo-balas.jpeg" alt="Bruno na cadeira de rodas, vendendo balas na rua" loading="lazy">
+      <figcaption>Bruno na avenida, vendendo balas para ajudar nas contas</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ==========================================================
+     5. DOAÇÃO — valores de R$ 50 a R$ 500
+     ========================================================== -->
+<section class="secao secao-doar" id="doar">
+  <h2>Escolha o valor da sua doação</h2>
+  <p class="secao-sub">Cada doação aproxima Bruno de ter sua própria cadeira motorizada.</p>
+
+  <div class="valores" id="valores" role="group" aria-label="Valores de doação"></div>
+
+  <div class="valor-livre">
+    <label for="valor-outro">Ou digite outro valor</label>
+    <div class="campo-moeda">
+      <span>R$</span>
+      <input type="number" id="valor-outro" min="1" step="1" placeholder="0" inputmode="numeric">
+    </div>
+  </div>
+
+  <div class="resumo">
+    <p class="resumo-rotulo">Você vai doar</p>
+    <p class="resumo-valor" id="resumo-valor">R$ 100</p>
+    <p class="resumo-impacto" id="resumo-impacto"></p>
+  </div>
+
+  <button class="btn btn-largo btn-grande" id="btn-doar">Quero Ajudar</button>
+  <button class="link-discreto-grande" id="btn-depois-grande">Contribuir com Bruno outro dia</button>
+</section>
+
+<!-- ==========================================================
+     6. TRANSPARÊNCIA
+     ========================================================== -->
+<section class="secao" id="transparencia">
+  <h2>Transparência</h2>
+  <p class="secao-sub">Prestação de contas atualizada ao longo da campanha.</p>
+
+  <ol class="atualizacoes">
+    <!-- TROCAR: adicione uma entrada a cada novidade, a mais recente no topo.
+         Fotos de recibos e da cadeira motorizada sendo entregue valem mais que qualquer texto. -->
+    <li>
+      <span class="atualizacao-data">25/11/2026</span>
+      <h3>Compras planejadas</h3>
+      <p>Assim que arrecadarmos os fundos necessários, iniciaremos a compra da cadeira de rodas motorizada com controle de queixo. Os comprovantes de cada etapa serão compartilhados aqui para garantir transparência total com todos os doadores.</p>
+    </li>
+    <li>
+      <span class="atualizacao-data">15/11/2026</span>
+      <h3>Campanha iniciada</h3>
+      <p>
+        Começamos a corrente do bem com a meta de R$ 100.000 em 30 dias para
+        dar a Bruno sua cadeira de rodas motorizada e a independência para
+        trabalhar sozinho, sem depender do pai para se locomover.
+      </p>
+    </li>
+  </ol>
+
+  <!-- Documentação que comprova o caso -->
+  <div class="destino">
+    <h3>Documentos do caso</h3>
+    <p class="secao-sub" style="margin-bottom:1em">
+      <!-- TROCAR: liste o que você tem. Se não tiver algum item, apague a linha —
+           não prometa documento que não existe. -->
+      Quem quiser conferir pode solicitar pelo contato no rodapé:
+    </p>
+    <ul class="lista-destino">
+      <li><span>Laudo médico de Bruno</span><span class="destino-valor">sob sigilo</span></li>
+      <li><span>Fotos de Bruno e do pai</span><span class="destino-valor">disponível</span></li>
+      <li><span>Orçamento da cadeira motorizada</span><span class="destino-valor">disponível</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="rodape">
+  <p><strong>Corrente do Bem</strong> · Organizada por <strong>Marina Silva Santos</strong></p>
+  <p><strong>Email:</strong> contato@correntedobem.com.br · <strong>WhatsApp:</strong> (11) 98765-4321</p>
+  <p style="font-size: 0.8rem; margin-top: 12px; color: rgba(255, 255, 255, .5);">CPF: 123.456.789-00 · Chave PIX: (11) 98765-4321</p>
+</footer>
+
+<!-- Espaço para a barra fixa não cobrir o rodapé -->
+<div class="espaco-barra"></div>
+
+
+<!-- ==========================================================
+     BARRA FIXA — sempre visível no rodapé do celular
+     ========================================================== -->
+<div class="barra-fixa" id="barra-fixa">
+  <div class="barra-fixa-info">
+    <span class="barra-fixa-valor" id="barra-fixa-valor">R$ 0</span>
+    <span class="barra-fixa-meta" id="barra-fixa-meta">de R$ 100.000</span>
+  </div>
+  <button class="btn" id="btn-barra-fixa">Quero Ajudar</button>
+</div>
+
+
+<!-- ==========================================================
+     POP-UP DE DOAÇÃO — 3 passos
+     Passo 1: valor · Passo 2: nome e telefone · Passo 3: PIX
+     ========================================================== -->
+<div class="modal" id="modal" hidden>
+  <div class="modal-fundo" id="modal-fundo"></div>
+
+  <div class="modal-caixa" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <button class="modal-fechar" id="modal-fechar" aria-label="Fechar">×</button>
+
+    <!-- Indicador de progresso -->
+    <div class="passos" aria-hidden="true">
+      <span class="passo-ponto ativo" data-passo="1"></span>
+      <span class="passo-ponto" data-passo="2"></span>
+      <span class="passo-ponto" data-passo="3"></span>
+    </div>
+
+    <!-- ---------- PASSO 1: escolher o valor ---------- -->
+    <div class="passo" data-conteudo="1">
+      <h2 id="modal-titulo">Ajude Bruno a conquistar sua independência</h2>
+      <p class="modal-sub">Escolha quanto você quer doar</p>
+
+      <div class="valores valores-modal" id="valores-modal" role="group" aria-label="Valores de doação"></div>
+
+      <div class="valor-livre">
+        <label for="valor-outro-modal">Outro valor</label>
+        <div class="campo-moeda">
+          <span>R$</span>
+          <input type="number" id="valor-outro-modal" min="1" step="1" placeholder="0" inputmode="numeric">
+        </div>
+      </div>
+
+      <p class="modal-impacto" id="modal-impacto"></p>
+
+      <button class="btn btn-largo btn-grande" id="btn-passo1">Continuar</button>
+      <button class="link-discreto" id="btn-depois">Quero ler a história primeiro</button>
+    </div>
+
+    <!-- ---------- PASSO 2: nome e telefone ---------- -->
+    <div class="passo" data-conteudo="2" hidden>
+      <h2>Quase lá!</h2>
+      <p class="modal-sub">
+        Deixe seu contato para registrarmos sua doação de
+        <strong id="modal-valor-eco">R$ 100</strong> e te enviarmos a prestação de contas.
+      </p>
+
+      <form id="form-lead" novalidate>
+        <div class="campo">
+          <label for="lead-nome">Seu nome</label>
+          <input type="text" id="lead-nome" name="nome" autocomplete="name"
+                 placeholder="Como podemos te chamar?" required>
+          <span class="erro" id="erro-nome"></span>
+        </div>
+
+        <div class="campo">
+          <label for="lead-telefone">WhatsApp</label>
+          <input type="tel" id="lead-telefone" name="telefone" autocomplete="tel"
+                 placeholder="(00) 00000-0000" inputmode="tel" maxlength="15" required>
+          <span class="erro" id="erro-telefone"></span>
+        </div>
+
+        <div class="campo">
+          <label for="lead-email">E-mail</label>
+          <input type="email" id="lead-email" name="email" autocomplete="email"
+                 placeholder="seu@email.com" required>
+          <span class="erro" id="erro-email"></span>
+        </div>
+
+        <div class="campo">
+          <label for="lead-cpf">CPF</label>
+          <input type="text" id="lead-cpf" name="cpf" autocomplete="off"
+                 placeholder="000.000.000-00" inputmode="numeric" maxlength="14" required>
+          <span class="erro" id="erro-cpf"></span>
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" id="lead-anonimo">
+          <span>Prefiro que minha doação seja anônima</span>
+        </label>
+
+        <button type="submit" class="btn btn-largo btn-grande">Ver dados do PIX</button>
+        <button type="button" class="link-discreto" id="btn-voltar2">Voltar</button>
+      </form>
+
+      <p class="nota-privacidade">
+        Usamos seu contato apenas para confirmar a doação e enviar notícias da
+        campanha. Não compartilhamos com ninguém.
+      </p>
+    </div>
+
+    <!-- ---------- PASSO 3: PIX ---------- -->
+    <div class="passo" data-conteudo="3" hidden>
+      <div class="confirmacao">
+        <div class="confirmacao-icone" aria-hidden="true">♥</div>
+        <h2>Obrigado, <span id="modal-nome-eco">amigo</span>!</h2>
+        <p class="modal-sub">Faça o PIX de <strong id="modal-valor-eco2">R$ 100</strong> para concluir.</p>
+      </div>
+
+      <div class="pix-caixa" id="pix-caixa">
+        <p id="pix-carregando">Gerando seu QR Code PIX...</p>
+
+        <div class="pix-qr" id="pix-qr" hidden>
+          <canvas id="pix-qr-canvas" role="img" aria-label="QR Code do PIX"></canvas>
+          <p class="qr-aviso">QR Code indisponível no momento — use o código copia-e-cola abaixo.</p>
+        </div>
+
+        <div id="pix-dados" hidden>
+          <p class="pix-rotulo">PIX copia e cola</p>
+          <div class="pix-chave">
+            <code id="pix-chave"></code>
+          </div>
+          <button class="btn btn-largo" id="btn-copiar-pix">Copiar código PIX</button>
+        </div>
+
+        <p id="pix-erro" class="erro visivel" hidden>
+          Não conseguimos gerar o PIX agora.
+          <button class="btn btn-largo" id="btn-tentar-pix" type="button">Tentar novamente</button>
+        </p>
+      </div>
+
+      <button class="link-discreto" id="btn-fechar3">Fechar</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- Lightbox das fotos -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lightbox-fechar" id="lightbox-fechar" aria-label="Fechar">×</button>
+  <img src="" alt="" id="lightbox-img">
+  <p class="lightbox-legenda" id="lightbox-legenda"></p>
+</div>
+
+<!-- Aviso flutuante -->
+<div class="toast" id="toast" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="js/campanha.js"></script>
+</body>
+</html>
