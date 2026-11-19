@@ -13,7 +13,6 @@
     "pix",
     "doacao"
   ],
-  "author": "Enzo Guedes",
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
