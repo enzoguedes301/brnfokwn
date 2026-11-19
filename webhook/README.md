@@ -22,7 +22,7 @@ cp .env.example .env
 
 Edite `.env` com suas credenciais:
 ```env
-ZUCKPAY_CLIENT_ID=JJ_9647038311
+ZUCKPAY_CLIENT_ID=seu_client_id_aqui
 ZUCKPAY_CLIENT_SECRET=seu_secret_aqui
 GOOGLE_SHEET_ID=seu_sheet_id
 SMTP_USER=seu_email@gmail.com
